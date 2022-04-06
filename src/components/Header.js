@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MenuIcon from "@mui/icons-material/Menu" 
 import CurtainsClosedIcon from '@mui/icons-material/CurtainsClosed';
+import { selectCars } from "../features/car/carSlice"
+import { useSelector } from "react-redux";
 
 
 
