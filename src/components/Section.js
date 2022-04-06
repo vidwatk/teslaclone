@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import Bounce from 'react-reveal/Bounce';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 function Section({title, description, leftBtnText, rightBtnText, backgroundImg}) {
     //console.log(props);
   return (
       <Wrap bgImage={backgroundImg}>
-          <ItemText>
-              <h1>{title}</h1>
-              <p>{description}</p>
-          </ItemText>
+          <Bounce left>
+            <ItemText>
+                <h1>{title}</h1>
+                <p>{description}</p>
+            </ItemText>
+          </Bounce>
+          <LightSpeed left>
           <Buttons>
                 <ButtonGroup>
                     <LeftButton>
@@ -23,6 +28,7 @@ function Section({title, description, leftBtnText, rightBtnText, backgroundImg})
                 </ButtonGroup>
                 <DownArrow src= "/images/down-arrow.svg" />
           </Buttons>
+          </LightSpeed>
       </Wrap>
   )
 }
@@ -42,6 +48,7 @@ const Wrap = styled.div`
     
 `
 const ItemText = styled.div`
+    z-index: 10;
     padding-top: 15vh;
     text-align: center;
 `
